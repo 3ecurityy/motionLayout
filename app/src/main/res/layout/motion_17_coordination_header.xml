@@ -1,0 +1,59 @@
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1e376b"
+    app:layoutDescription="@xml/collapsing_header">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_backicon" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_source_icon" />
+
+
+    <TextView
+        android:id="@+id/txt_showContetn_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Monterey"
+        android:textColor="#FFF"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toStartOf="@+id/img_source"
+        app:layout_constraintStart_toEndOf="@+id/img_menu"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+
+    <com.example.test.BoundsImageView
+        android:id="@+id/img_showContent_header"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bw4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
